@@ -3,5 +3,8 @@
 # Prints input as ticket
 class TicketPrint:
 
-    def displayProduct(inp):
+    def displayText(inp):
         print("Ticket: \n", inp)
+
+    def update(message):
+        print("Ticket Printer has been notifed with message: ", message)

@@ -13,14 +13,13 @@ class CashRegisterOut:
     def getCurrentProductInfo(UPCCode):
         productinfo = ProductDBOut.GetProductInfo(UPCCode)
 
+class view: 
         # Outputs to Display
-        DisplayPrint.displayText(productinfo)
+        DisplayPrint.displayProduct(productinfo)
 
         #Prints Ticket
-        TicketPrint.displayText(productinfo)
-    def dispatch(message):
-        DisplayPrint.update(message)
-        TicketPrint.update(message)
+        TicketPrint.displayProduct(productinfo)
+
 
 print("Valid UPCs range from 0000 - 0006")
 keyboardin = input("Keyboard - Please type UPC (XXXX): \n")
@@ -35,15 +34,12 @@ scannerUPC = CashRegisterOut.setCurrentProductUPC(scanner)
 
 #Display
 print("UPC: ", keyboardUPC)
-CashRegisterOut.getCurrentProductInfo(keyboardUPC)
+view.getCurrentProductInfo(keyboardUPC)
 print("\n")
 
 #Ticket
 print("UPC: ", scannerUPC)
-CashRegisterOut.getCurrentProductInfo(scannerUPC)
-
-# Observers being updated
-CashRegisterOut.dispatch("Product has been updated!")
+view.getCurrentProductInfo(scannerUPC)
 
 
 #DisplayPrint.displayText("Test") ##
