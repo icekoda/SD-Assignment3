@@ -1,0 +1,8 @@
+To begin for exercise one an advantage we saw is that it allows us to change
+specific and different parts of the application without effecting or
+changing the remaining parts of the application. So for exercise three using the 
+observer pattern gives us an advantage as it notifies the display/user when changes 
+are being made but it would get a bit bothersome if there is a lot of changes 
+happening due to the excessive amount of notifications.
+All of these approaches had there unique advantages and disadvantages depending 
+on what you are looking for within the application.
